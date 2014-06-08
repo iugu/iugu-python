@@ -5,8 +5,8 @@ import re
 import json
 import base64
 import requests
-import exception
-from version import __version__
+from iugu import exception
+from iugu.version import __version__
 
 
 class IuguApi(object):

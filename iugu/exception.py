@@ -5,5 +5,5 @@ class ConfigError(Exception):
     pass
 
 
-class ConfigError(Exception):
+class RequiredParameters(Exception):
     pass

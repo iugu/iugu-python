@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from action import Action
-from exception import RequiredParameters
+from iugu.action import Action
+from iugu.exception import RequiredParameters
 
 
 class Transfer(Action):

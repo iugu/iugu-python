@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from iuguapi import default_api
+from iugu.iuguapi import default_api
 
 
 class Action(object):
