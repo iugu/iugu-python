@@ -60,4 +60,4 @@ class PaymentMethod(Action):
 
     def list(self):
         url = self.api.make_url(self.base_url_paths)
-        return super(PaymentMethod, self).list(url, data)
+        return super(PaymentMethod, self).list(url)
