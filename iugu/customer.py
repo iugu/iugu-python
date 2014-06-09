@@ -38,10 +38,10 @@ class PaymentMethod(Action):
         super(PaymentMethod, self).__init__()
 
     def create(self, data):
-        if not data.get('description', None):
+        if not data.get('token', None) and not data.get('data', {}):
+            raise RequiredParameters('Please, inform token or card data{} to create a Payment Method')
+        elif not data.get('description', None):
             raise RequiredParameters('Payment Method description not informed')
-        elif not data.get('data', {}):
-            raise RequiredParameters('Payment Method data not informed')
         url = self.api.make_url(self.base_url_paths)
         return super(PaymentMethod, self).create(url, data)
 
