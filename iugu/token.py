@@ -4,7 +4,7 @@ from iugu.action import Action
 from iugu.exception import RequiredParameters
 
 
-class Token(object):
+class Token(Action):
 
     def create(self, data):
         if not data.get('account_id', None):
