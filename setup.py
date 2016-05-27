@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+
 try:
     from distutils.core import setup
 except ImportError:

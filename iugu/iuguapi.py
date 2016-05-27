@@ -3,11 +3,10 @@
 import os
 import re
 import json
-import base64
 import requests
 from iugu import exception
 from iugu.version import __version__
-
+from requests.auth import HTTPBasicAuth
 
 class IuguApi(object):
 
@@ -16,8 +15,6 @@ class IuguApi(object):
 
     def headers(self):
         return {
-            "Authorization": "Basic %s" % base64.encodestring(
-                "%s:" % self.token).replace("\n", ""),
             "User-Agent": "Iugu Python Api %s" % __version__,
             "Content-Type": "application/json",
             "Accept": "application/json"
@@ -26,6 +23,7 @@ class IuguApi(object):
     def base_request(self, url, method, data={}):
         try:
             response = requests.request(method, url,
+                                        auth=HTTPBasicAuth(self.token, ''),
                                         data=json.dumps(data),
                                         headers=self.headers())
             return json.loads(response.content.decode('utf-8'))
