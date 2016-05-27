@@ -20,3 +20,7 @@ Visit [iugu.com/referencias/api](http://iugu.com/referencias/api) for api refere
 ## Author
 
 Originally by [Felipe Tomaz](https://github.com/lspecian) and [Arthur Furlan](https://github.com/arthurfurlan).
+
+## Contributor
+
+[André Kiffer](https://github.com/andrekiffer).
