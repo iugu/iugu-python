@@ -1,8 +1,5 @@
 # -*- coding: utf-8 -*-
-try:
-    from distutils.core import setup
-except ImportError:
-    from setuptools import setup
+from setuptools import setup
 
 import sys, os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'iugu'))
