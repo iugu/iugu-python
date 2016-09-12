@@ -24,3 +24,4 @@ Originally by [Felipe Tomaz](https://github.com/lspecian) and [Arthur Furlan](ht
 ## Contributor
 
 [André Kiffer](https://github.com/andrekiffer).
+[Rodolpho Pivetta Sabino](https://github.com/rodolphopivetta).
