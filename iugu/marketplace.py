@@ -22,4 +22,4 @@ class MarketPlace(Action):
 
     def sub_account(self, id):
         url = self.api.make_url(['accounts', id])
-        return super(MarketPlace, self).list(url, data)
+        return super(MarketPlace, self).list(url)
