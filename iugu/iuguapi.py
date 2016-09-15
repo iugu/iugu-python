@@ -22,7 +22,7 @@ class IuguApi(object):
 
     def base_request(self, url, method, data={}, files={}):
         try:
-            headers = {}
+            headers = {"User-Agent": "Iugu Python Api %s" % __version__}
             if not files:
                 data = json.dumps(data)
                 headers = self.headers()
