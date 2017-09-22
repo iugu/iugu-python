@@ -15,23 +15,23 @@ Execute the setup script:
     
 ## Usage
 
-You shoul import and create an iugu instance using your [api token](https://dev.iugu.com/reference#section-criando-suas-chaves-de-api-api-tokens):
+You should import and create an iugu instance using your [api token](https://dev.iugu.com/reference#section-criando-suas-chaves-de-api-api-tokens):
 
 ```py
 import iugu
 api = iugu.config(token=IUGU_API_TOKEN)
 ```
 
-After that you can use the instace to iniciate the module you need, example:
+After that you can use the instance to iniciate the module you need, example:
 
-```
+```py
 # token api
 iugu_token_api = iugu.Token()
 # customer api
 iugu_customer_api = iugu.Customer()
 ```
 
-To see all available module, check the [iugu folder](https://github.com/iugu/iugu-python/tree/master/iugu) of this project.
+To see all available modules, check the [iugu folder](https://github.com/iugu/iugu-python/tree/master/iugu) of this project.
 
 ## Documentation
 
