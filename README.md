@@ -12,7 +12,7 @@ Execute the setup script:
 
     $ cd iugu-python
     $ python setup.py install
-    
+
 ## Usage
 
 You should import and create an iugu instance using your [api token](https://dev.iugu.com/reference#section-criando-suas-chaves-de-api-api-tokens):
@@ -45,3 +45,4 @@ Originally by [Felipe Tomaz](https://github.com/lspecian) and [Arthur Furlan](ht
 
 [André Kiffer](https://github.com/andrekiffer).
 [Rodolpho Pivetta Sabino](https://github.com/rodolphopivetta).
+[Joabe Mendes](https://github.com/JoabMendes).

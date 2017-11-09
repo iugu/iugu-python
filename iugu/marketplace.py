@@ -15,8 +15,6 @@ class MarketPlace(Action):
     def request_verification(self, id, data):
         if not data.get('data', None):
             raise RequiredParameters('MarketPlace data not informed')
-        if not data.get('files', None):
-            raise RequiredParameters('MarketPlace files not informed')
         url = self.api.make_url(['accounts', id, 'request_verification'])
         return self.api.post(url, data)
 
