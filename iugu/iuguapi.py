@@ -20,12 +20,17 @@ class IuguApi(object):
             "Accept": "application/json"
         }
 
-    def base_request(self, url, method, data={}):
+    def base_request(self, url, method, data={}, files={}):
         try:
+            headers = {"User-Agent": "Iugu Python Api %s" % __version__}
+            if not files:
+                data = json.dumps(data)
+                headers = self.headers()
             response = requests.request(method, url,
                                         auth=HTTPBasicAuth(self.token, ''),
-                                        data=json.dumps(data),
-                                        headers=self.headers())
+                                        data=data,
+                                        files=files,
+                                        headers=headers)
             return json.loads(response.content.decode('utf-8'))
         #TODO: Create especifics exceptions
         except Exception as error:
@@ -34,8 +39,8 @@ class IuguApi(object):
     def get(self, url, data={}):
         return self.base_request(url, 'GET', data=data)
 
-    def post(self, url, data={}):
-        return self.base_request(url, 'POST', data=data)
+    def post(self, url, data={}, files={}):
+        return self.base_request(url, 'POST', data=data, files=files)
 
     def put(self, url, data={}):
         return self.base_request(url, 'PUT', data=data)
