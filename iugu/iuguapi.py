@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import os
+from decouple import config as env
 import re
 import json
 import requests
@@ -57,7 +57,7 @@ def default_api():
     global __default_api__
     if __default_api__ is None:
         try:
-            token = os.environ["IUGU_API_TOKEN"]
+            token = env('IUGU_API_TOKEN')
         except KeyError:
             raise exception.ConfigError("Required IUGU_API_TOKEN")
         __default_api__ = IuguApi(token=token)

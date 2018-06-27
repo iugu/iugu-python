@@ -12,6 +12,10 @@ Execute the setup script:
 
     $ cd iugu-python
     $ python setup.py install
+    
+From Pypi:
+
+    $ pip install iugu
 
 ## Usage
 
