@@ -4,14 +4,20 @@ The Iugu provides a Python REST APIs to create, process and manage payments.
 
 ## Installation
 
-Clone the source:
+Using pip:
 
-    $ git clone git@github.com:iugu/iugu-python.git
-    
-Execute the setup script:
+    $ pip install iugu
 
-    $ cd iugu-python
-    $ python setup.py install
+From source code:
+
+    Clone the source:
+
+        $ git clone git@github.com:iugu/iugu-python.git
+
+    Execute the setup script:
+
+        $ cd iugu-python
+        $ python setup.py install
 
 ## Usage
 
