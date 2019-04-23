@@ -30,6 +30,12 @@ class Invoice(Action):
         url = self.api.make_url(['invoices', id])
         return super(Invoice, self).change(url, data)
 
+    def duplicate(self, id, data):
+        if not data.get('due_date', None):
+            raise RequiredParameters('Invoice due_date not informed')
+        url = self.api.make_url(['invoices', id, 'duplicate'])
+        return self.api.post(url, data)
+
     def remove(self, id):
         url = self.api.make_url(['invoices', id])
         return super(Invoice, self).remove(url)
