@@ -1,7 +1,0 @@
-*.pyc
-build/
-dist/
-MANIFEST
-.*.sw*
-.idea/
-.env/
